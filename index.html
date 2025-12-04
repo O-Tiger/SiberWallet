@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiberWallet - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="./assets/tiger.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-container me-2">
+                   <img src="./assets/tiger.png" alt="Siberian Tiger representing that ability to ">
+                </div>
+                <span class="fw-bold">SiberWallet</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-exchange-alt me-1"></i> Transferências</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-line me-1"></i> Investimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-credit-card me-1"></i> Cartões</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-1"></i> Perfil
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid px-4 py-4">
+        <div class="row">
+            <!-- Welcome Section -->
+            <div class="col-12 mb-4">
+                <div class="welcome-card">
+                    <h2 class="mb-1">Bem-vindo de volta, João! <i class="fas fa-hand-wave text-warning"></i></h2>
+                    <p class="text-muted mb-0">Aqui está um resumo das suas finanças hoje</p>
+                </div>
+            </div>
+
+            <!-- Balance Cards -->
+            <div class="col-md-4 mb-4">
+                <div class="card balance-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <p class="text-muted mb-1">Saldo Total</p>
+                                <h3 class="mb-0 fw-bold">R$ 15.678,90</h3>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> +5% ao mês</small>
+                            </div>
+                            <div class="icon-badge bg-primary-subtle">
+                                <i class="fas fa-wallet text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card balance-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <p class="text-muted mb-1">Investimentos</p>
+                                <h3 class="mb-0 fw-bold">R$ 8.450,00</h3>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> +12% no ano</small>
+                            </div>
+                            <div class="icon-badge bg-success-subtle">
+                                <i class="fas fa-chart-line text-success"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card balance-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <p class="text-muted mb-1">Despesas do Mês</p>
+                                <h3 class="mb-0 fw-bold">R$ 3.240,50</h3>
+                                <small class="text-danger"><i class="fas fa-arrow-down"></i> -15% vs mês anterior</small>
+                            </div>
+                            <div class="icon-badge bg-danger-subtle">
+                                <i class="fas fa-shopping-cart text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Ações Rápidas</h5>
+                        <div class="row g-3">
+                            <div class="col-md-3 col-6">
+                                <button class="btn btn-action w-100">
+                                    <i class="fas fa-paper-plane mb-2"></i>
+                                    <span>Transferir</span>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <button class="btn btn-action w-100">
+                                    <i class="fas fa-barcode mb-2"></i>
+                                    <span>Pagar Boleto</span>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <button class="btn btn-action w-100">
+                                    <i class="fas fa-mobile-alt mb-2"></i>
+                                    <span>Recarregar</span>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <button class="btn btn-action w-100">
+                                    <i class="fas fa-qrcode mb-2"></i>
+                                    <span>PIX</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="col-lg-8 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="card-title mb-0">Atividades Recentes</h5>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" class="btn btn-outline-primary active">Todas</button>
+                                <button type="button" class="btn btn-outline-primary">Receitas</button>
+                                <button type="button" class="btn btn-outline-primary">Despesas</button>
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-list">
+                            <div class="transaction-item">
+                                <div class="transaction-icon bg-success-subtle">
+                                    <i class="fas fa-arrow-down text-success"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h6 class="mb-0">Salário Recebido</h6>
+                                    <small class="text-muted">Empresa XYZ - 15 de out</small>
+                                </div>
+                                <div class="transaction-amount text-success">
+                                    + R$ 5.500,00
+                                </div>
+                            </div>
+
+                            <div class="transaction-item">
+                                <div class="transaction-icon bg-danger-subtle">
+                                    <i class="fas fa-shopping-bag text-danger"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h6 class="mb-0">Compra iFood</h6>
+                                    <small class="text-muted">Restaurante - 14 de out</small>
+                                </div>
+                                <div class="transaction-amount text-danger">
+                                    - R$ 45,90
+                                </div>
+                            </div>
+
+                            <div class="transaction-item">
+                                <div class="transaction-icon bg-primary-subtle">
+                                    <i class="fas fa-exchange-alt text-primary"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h6 class="mb-0">Transferência Enviada</h6>
+                                    <small class="text-muted">Maria Silva - 13 de out</small>
+                                </div>
+                                <div class="transaction-amount text-danger">
+                                    - R$ 250,00
+                                </div>
+                            </div>
+
+                            <div class="transaction-item">
+                                <div class="transaction-icon bg-warning-subtle">
+                                    <i class="fas fa-bolt text-warning"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h6 class="mb-0">Conta de Luz</h6>
+                                    <small class="text-muted">ENEL - 12 de out</small>
+                                </div>
+                                <div class="transaction-amount text-danger">
+                                    - R$ 230,45
+                                </div>
+                            </div>
+
+                            <div class="transaction-item">
+                                <div class="transaction-icon bg-success-subtle">
+                                    <i class="fas fa-piggy-bank text-success"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h6 class="mb-0">Rendimento CDB</h6>
+                                    <small class="text-muted">Investimento - 10 de out</small>
+                                </div>
+                                <div class="transaction-amount text-success">
+                                    + R$ 87,34
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-link">Ver todas as transações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investments Summary -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Seus Investimentos</h5>
+                        
+                        <div class="investment-item">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="investment-name">CDB 100% CDI</span>
+                                <span class="investment-value">R$ 5.000,00</span>
+                            </div>
+                            <div class="progress mb-1" style="height: 8px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small class="text-success">+8,5% ao ano</small>
+                        </div>
+
+                        <div class="investment-item">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="investment-name">Tesouro Selic</span>
+                                <span class="investment-value">R$ 2.500,00</span>
+                            </div>
+                            <div class="progress mb-1" style="height: 8px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small class="text-success">+6,2% ao ano</small>
+                        </div>
+
+                        <div class="investment-item">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="investment-name">Fundo Multimercado</span>
+                                <span class="investment-value">R$ 950,00</span>
+                            </div>
+                            <div class="progress mb-1" style="height: 8px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small class="text-success">+15,3% ao ano</small>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary btn-sm">Investir Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Card -->
+                <div class="card mt-4 support-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-headset fs-1 text-primary mb-3"></i>
+                        <h6 class="mb-2">Precisa de Ajuda?</h6>
+                        <p class="text-muted small mb-3">Nossa equipe está pronta para te atender 24/7</p>
+                        <button class="btn btn-outline-primary btn-sm">Falar com Suporte</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 SiberWallet. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Termos de Uso</a>
+                    <a href="#" class="text-muted">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
