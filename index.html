@@ -43,6 +43,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Minha Conta</a></li>
                             <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item text-warning" id="nm-logout-btn" href="#"><i class="fas fa-unlink me-1"></i> Desconectar NexusMail</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Sair</a></li>
                         </ul>
@@ -58,7 +59,7 @@
             <!-- Welcome Section -->
             <div class="col-12 mb-4">
                 <div class="welcome-card">
-                    <h2 class="mb-1">Bem-vindo de volta, João! <i class="fas fa-hand-wave text-warning"></i></h2>
+                    <h2 class="mb-1">Bem-vindo de volta, <span id="nm-welcome-name">você!</span> <i class="fas fa-hand-wave text-warning"></i></h2>
                     <p class="text-muted mb-0">Aqui está um resumo das suas finanças hoje</p>
                 </div>
             </div>
@@ -69,9 +70,9 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
-                                <p class="text-muted mb-1">Saldo Total</p>
-                                <h3 class="mb-0 fw-bold">R$ 15.678,90</h3>
-                                <small class="text-success"><i class="fas fa-arrow-up"></i> +5% ao mês</small>
+                                <p class="text-muted mb-1">Saldo Líquido (30d)</p>
+                                <h3 class="mb-0 fw-bold">—</h3>
+                                <small class="text-muted">Carregando...</small>
                             </div>
                             <div class="icon-badge bg-primary-subtle">
                                 <i class="fas fa-wallet text-primary"></i>
@@ -86,9 +87,9 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
-                                <p class="text-muted mb-1">Investimentos</p>
-                                <h3 class="mb-0 fw-bold">R$ 8.450,00</h3>
-                                <small class="text-success"><i class="fas fa-arrow-up"></i> +12% no ano</small>
+                                <p class="text-muted mb-1">Receitas (30d)</p>
+                                <h3 class="mb-0 fw-bold">—</h3>
+                                <small class="text-muted">Carregando...</small>
                             </div>
                             <div class="icon-badge bg-success-subtle">
                                 <i class="fas fa-chart-line text-success"></i>
@@ -103,9 +104,9 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
-                                <p class="text-muted mb-1">Despesas do Mês</p>
-                                <h3 class="mb-0 fw-bold">R$ 3.240,50</h3>
-                                <small class="text-danger"><i class="fas fa-arrow-down"></i> -15% vs mês anterior</small>
+                                <p class="text-muted mb-1">Despesas (30d)</p>
+                                <h3 class="mb-0 fw-bold">—</h3>
+                                <small class="text-muted">Carregando...</small>
                             </div>
                             <div class="icon-badge bg-danger-subtle">
                                 <i class="fas fa-shopping-cart text-danger"></i>
@@ -241,43 +242,12 @@
             <div class="col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title mb-4">Seus Investimentos</h5>
-                        
-                        <div class="investment-item">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="investment-name">CDB 100% CDI</span>
-                                <span class="investment-value">R$ 5.000,00</span>
-                            </div>
-                            <div class="progress mb-1" style="height: 8px;">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <small class="text-success">+8,5% ao ano</small>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="card-title mb-0">Próximos Pagamentos</h5>
+                            <span class="badge bg-warning text-dark" style="font-size:0.7rem">NexusMail</span>
                         </div>
-
-                        <div class="investment-item">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="investment-name">Tesouro Selic</span>
-                                <span class="investment-value">R$ 2.500,00</span>
-                            </div>
-                            <div class="progress mb-1" style="height: 8px;">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <small class="text-success">+6,2% ao ano</small>
-                        </div>
-
-                        <div class="investment-item">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="investment-name">Fundo Multimercado</span>
-                                <span class="investment-value">R$ 950,00</span>
-                            </div>
-                            <div class="progress mb-1" style="height: 8px;">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <small class="text-success">+15,3% ao ano</small>
-                        </div>
-
-                        <div class="text-center mt-4">
-                            <a href="#" class="btn btn-primary btn-sm">Investir Mais</a>
+                        <div id="nm-upcoming-list">
+                            <p class="text-muted text-center small">Conecte o NexusMail para ver os próximos pagamentos</p>
                         </div>
                     </div>
                 </div>
